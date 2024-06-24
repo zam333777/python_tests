@@ -30,7 +30,12 @@ def setup_teardown(request):
             assert update_response.status_code == 200
             assert test_methods.get_query(base_url, post_id_return_data, 'title', 'body') == [new_data['title'], new_data['body']]
 
-#------------------------Tests---------------------------------------------------------------
+
+
+
+
+#------------------------Tets with GET methods ----------------------------------------------
+
 #check all posts from the endpoint.The endpoint has 100 posts.Compare the response with the map_with_posts.py file
 def test_get_all_posts_from_endpoint():
     for i in range (1, 101):
@@ -49,6 +54,10 @@ def test_negative_get_post_wrong_data():
     response = test_methods.get_query_negative(base_url, '_1_!*8:;%3')
     assert response is not None, f"Test failed: {response}"
     assert response.status_code == 404, f"Test failed: {response.status_code}"
+
+
+
+#------------------------Tets with POST methods ----------------------------------------------
 
 #get a post with wrong data from the endpoint
 def test_new_post(setup_teardown, request):
@@ -69,6 +78,11 @@ def test_new_post_overload_data():
     response = test_methods.post_query(base_url, '/', prepared_data.big_data)
     assert response.status_code == 500, f"Test failed: {response}"
 
+
+
+
+#------------------------Tets with DELETE  methods ----------------------------------------------
+
 #delete a post from the endpoint
 def test_delete_post():
     response = test_methods.delete_query(base_url, '102')
@@ -83,6 +97,13 @@ def test_delete_invalid_post():
 def test_delete_post_with_null_endpoint():
     response = test_methods.delete_query(base_url, '')
     assert response.status_code == 404, f"Test failed: {response}"
+
+
+
+
+
+
+#------------------------Tets with UPDATE  methods ----------------------------------------------
 
 #update a post from the endpoint. After test data in the post will be updated as it was before in map_with_posts.py
 def test_update_post(setup_teardown, request):
