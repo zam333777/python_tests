@@ -14,18 +14,18 @@
 ##  Vesion: 20240622 - 001
 
 ## Tests included in this file are:
- 1.test_get_all_posts_from_endpoint
- 2.test_negative_get_post
- 3.test_negative_get_post_wrong_data
- 4.test_new_post
- 5.test_new_post_max_size_data
- 6.test_new_post_overload_data
- 7.test_delete_post
- 8.test_delete_invalid_post
- 9.test_delete_post_with_null_endpoint
- 10.test_update_post
- 11.test_update_post_overload_data
- 12.test_update_post_max_data
+- 1.test_get_all_posts_from_endpoint
+- 2.test_negative_get_post
+- 3.test_negative_get_post_wrong_data
+- 4.test_new_post
+- 5.test_new_post_max_size_data
+- 6.test_new_post_overload_data
+- 7.test_delete_post
+- 8.test_delete_invalid_post (tests failed. need to ask details about expected result)
+- 9.test_delete_post_with_null_endpoint
+- 10.test_update_post
+- 11.test_update_post_overload_data
+- 12.test_update_post_max_data
 
 ## History: 
 20240622 - 001 -author - Initial version. Test are created for the posts endpoint.
