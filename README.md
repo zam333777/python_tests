@@ -21,7 +21,7 @@
 - test_new_post_max_size_data
 - test_new_post_overload_data
 - test_delete_post
-- test_delete_invalid_post (tests failed. need to ask details about expected result)
+- test_delete_invalid_post (test failed. need to ask details about expected result)
 - test_delete_post_with_null_endpoint
 - test_update_post
 - test_update_post_overload_data
